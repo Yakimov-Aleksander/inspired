@@ -62,7 +62,7 @@
   &__title {
     font-weight: 400;
     font-size: 44px;
-    line-height: 120%;
+    line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: 40px;
 
@@ -82,7 +82,6 @@
     padding: 14px 40px;
     font-weight: 700;
     font-size: 14px;
-    line-height: 17px;
     text-transform: uppercase;
     border: 1px solid $second-color;
     transition-property: background-color, border-color;
@@ -92,7 +91,6 @@
 
     @include tablet {
       font-size: 10px;
-      line-height: 12px;
       padding: 12px 40px;
     }
 

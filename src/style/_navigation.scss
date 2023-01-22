@@ -1,15 +1,15 @@
 .navigation {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 
   @include laptop {
-    margin-bottom: 38px;
+    padding-bottom: 38px;
   }
 
   @include laptop {
-    margin-bottom: 31px;
+    padding-bottom: 31px;
   }
 
   @include laptop {
-    margin-bottom: 19px;
+    padding-bottom: 19px;
   }
 }

@@ -1,5 +1,14 @@
-export const renderHero = () => {
+export const renderHero = (gender) => {
   const hero = document.querySelector('.hero');
+
+  if (!gender) {
+    hero.style.display = 'none';
+    return;
+  }
+
+  hero.style.display = '';
+
+  hero.className = `hero hero__${gender}`;
 
   hero.innerHTML = `
     <div class="container">

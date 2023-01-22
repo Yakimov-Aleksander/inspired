@@ -8,19 +8,16 @@
   gap: 15px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
   text-transform: uppercase;
 
   @include tablet {
     padding: 16px 0 5px;
     font-size: 12px;
-    line-height: 15px;
   }
 
   @include mobile {
     gap: 10px 30px;
     font-size: 10px;
-    line-height: 12px;
     justify-content: flex-start;
   }
 

@@ -18,12 +18,10 @@
   &__phone {
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
     text-transform: uppercase;
 
     @include tablet {
       font-size: 12px;
-      line-height: 15px;
     }
 
     @include mobile {
