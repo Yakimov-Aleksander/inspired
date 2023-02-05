@@ -1,45 +1,44 @@
 import './index.html';
 import './index.scss';
 
-import { router } from './modules/router';
+import { router } from './modules/utils/router';
 import { renderFooter } from './modules/render/renderFooter';
 import { renderHeader } from './modules/render/renderHeader';
-import { mainPage } from './modules/mainPage';
+import { mainPageController } from './modules/controller/mainPageController';
 import { getData } from './modules/getData';
 import { API_URL, DATA } from './modules/const';
 import { createCssColors } from './modules/createCssColors';
-import { createElement } from './modules/createElement';
-import { categoryPage } from './modules/categoryPage';
+import { createElement } from './modules/utils/createElement';
+import { categoryPageController } from './modules/controller/categoryPageController';
+import { searchPageController } from './modules/controller/searchController';
 
 const init = async () => {
   try {
+    DATA.navigation = await getData(`${API_URL}/api/categories`);
+    DATA.colors = await getData(`${API_URL}/api/colors`);
+
     router.on('*', () => {
       renderHeader();
       renderFooter();
     });
 
-    DATA.navigation = await getData(`${API_URL}/api/categories`);
-    DATA.colors = await getData(`${API_URL}/api/colors`);
-
     createCssColors(DATA.colors);
 
     router.on('/', () => {
-      mainPage();
+      mainPageController();
     });
 
     router.on('women', () => {
-      mainPage('women');
+      mainPageController('women');
     });
 
     router.on('men', () => {
-      mainPage('men');
+      mainPageController('men');
     });
 
-    router.on('/:gender/:category', categoryPage);
+    router.on('/:gender/:category', categoryPageController);
 
-    router.on('search', (data) => {
-      console.log(data.params.value);
-    });
+    router.on('search', searchPageController);
 
     // setTimeout(() => {
     //   router.navigate('men');
