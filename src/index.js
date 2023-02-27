@@ -6,11 +6,12 @@ import { renderFooter } from './modules/render/renderFooter';
 import { renderHeader } from './modules/render/renderHeader';
 import { mainPageController } from './modules/controller/mainPageController';
 import { getData } from './modules/getData';
-import { API_URL, DATA } from './modules/const';
+import { API_URL, DATA, main } from './modules/const';
 import { createCssColors } from './modules/createCssColors';
 import { createElement } from './modules/utils/createElement';
 import { categoryPageController } from './modules/controller/categoryPageController';
 import { searchPageController } from './modules/controller/searchController';
+import { favoriteController } from './modules/controller/favoriteController';
 
 const init = async () => {
   try {
@@ -40,13 +41,7 @@ const init = async () => {
 
     router.on('search', searchPageController);
 
-    // setTimeout(() => {
-    //   router.navigate('men');
-    // }, 3000);
-
-    // setTimeout(() => {
-    //   router.navigate('women');
-    // }, 6000);
+    router.on('favorite', favoriteController);
   } catch (e) {
     console.log(e);
     createElement(
@@ -55,7 +50,7 @@ const init = async () => {
         textContent: 'Что-то пошло не так...',
       },
       {
-        parent: document.querySelector('main'),
+        parent: main,
         cb(h2) {
           h2.style.textAlign = 'center';
         },

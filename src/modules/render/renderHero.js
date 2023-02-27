@@ -1,4 +1,4 @@
-import { TITLE } from '../const';
+import { hero, TITLE } from '../const';
 import { createElement } from '../utils/createElement';
 
 const container = createElement('div', {
@@ -37,8 +37,6 @@ const heroLink = createElement(
 );
 
 export const renderHero = (gender) => {
-  const hero = document.querySelector('.hero');
-
   if (!gender) {
     hero.style.display = 'none';
     return;
