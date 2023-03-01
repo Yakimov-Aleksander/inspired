@@ -1,0 +1,96 @@
+.order {
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $light-gray;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 29px;
+      padding-bottom: 15px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+      padding-bottom: 9px;
+    }
+  }
+
+  &__form {
+    padding-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding-top: 16px;
+      gap: 0;
+    }
+  }
+
+  &__personal {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 46px;
+    padding: 0 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  &__radio-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+      margin-bottom: 24px;
+      gap: 6px;
+    }
+  }
+
+  &__radio {
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__submit {
+    justify-self: end;
+    align-self: end;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

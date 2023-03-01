@@ -64,6 +64,215 @@
     <section class="hero hero__women">
     </section>
 
+    <section class="card">
+      <div class="container card__container">
+        <img class="card__image" src="img/card-img.jpg" alt="Пижама со штанами шелковая">
+
+        <form class="card__content" id="order">
+          <h2 class="card__title">Пижама со штанами шелковая</h2>
+
+          <p class="card__price">руб 6999</p>
+
+          <div class="card__vendor-code">
+            <span class="card__subtitle">Артикул</span>
+            <span class="card__id">089083</span>
+            <input type="hidden" name="id" value="089083">
+          </div>
+
+          <div class="card__color">
+            <p class="card__subtitle card__color-title">Цвет</p>
+
+            <div class="card__color-list">
+              <label class="card__color-item color color_black color_check">
+                <input class="input-hide" type="radio" name="color" value="black" checked>
+              </label>
+              <label class="card__color-item color color_red">
+                <input class="input-hide" type="radio" name="color" value="red">
+              </label>
+            </div>
+          </div>
+
+          <div class="card__size">
+            <p class="card__subtitle card__size-title">Размер</p>
+
+            <div class="card__size-list">
+              <label class="card__size-item size">
+                <input class="input-hide" type="radio" name="size" value="XS">XS
+              </label>
+              <label class="card__size-item size">
+                <input class="input-hide" type="radio" name="size" value="S">S
+              </label>
+              <label class="card__size-item size">
+                <input class="input-hide" type="radio" name="size" value="M">M
+              </label>
+              <label class="card__size-item size">
+                <input class="input-hide" type="radio" name="size" value="L">L
+              </label>
+              <label class="card__size-item size">
+                <input class="input-hide" type="radio" name="size" value="XL">XL
+              </label>
+            </div>
+          </div>
+
+          <div class="card__description">
+            <p class="card__subtitle card__description-title">Описание</p>
+
+            <p class="card__description-text">Домашняя женская пижама с сорочкой и штанами из шелка</p>
+          </div>
+
+          <div class="card__control">
+            <div class="card__count count">
+              <button class="count__item count__minus">-</button>
+              <span class="count__item count__number">1</span>
+              <button class="count__item count__plus">+</button>
+              <input type="hidden" name="count" value="1">
+            </div>
+
+            <button class="card__add-cart main-button" type="submit">В корзину</button>
+            <button class="card__favorite favorite" aria-label="Добавить в избранное" type="button"
+              data-id="321654"></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="cart-block">
+      <section class="cart">
+        <div class="container">
+          <h2 class="cart__title">Корзина</h2>
+
+          <ul class="cart__list">
+            <li class="cart__item">
+              <article class="item">
+                <img src="img/card-img.jpg" alt="Пижама со штанами шелковая" class="item__image">
+
+                <div class="item__content">
+                  <h3 class="item__title">Пижама со штанами шелковая</h3>
+
+                  <p class="item__price">руб 6999</p>
+
+                  <div class="item__vendor-code">
+                    <span class="item__subtitle">Артикул</span>
+                    <span class="item__id">089083</span>
+                  </div>
+                </div>
+
+                <div class="item__prop">
+                  <div class="item__color">
+                    <p class="item__subtitle item__color-title">Цвет</p>
+
+                    <div class="item__color-item color color_black color_check"></div>
+                  </div>
+
+                  <div class="item__size">
+                    <p class="item__subtitle item__size-title">Размер</p>
+
+                    <div class="item__size-item size">XS</div>
+                  </div>
+                </div>
+
+                <button class="item__del" aria-label="Удалить товар из корзины"></button>
+
+                <div class="count item__count">
+                  <button class="count__item count__minus">-</button>
+                  <span class="count__item count__number">1</span>
+                  <button class="count__item count__plus">+</button>
+                  <input type="hidden" name="count" value="1">
+                </div>
+              </article>
+            </li>
+
+            <li class="cart__item">
+              <article class="item">
+                <img src="img/cart-img.jpg" alt="Бюстгальтер-Балконет Prague Full Cover" class="item__image">
+
+                <div class="item__content">
+                  <h3 class="item__title">Бюстгальтер-Балконет Prague Full Cover</h3>
+
+                  <p class="item__price">руб 2599</p>
+
+                  <div class="item__vendor-code">
+                    <span class="item__subtitle">Артикул</span>
+                    <span class="item__id">084375</span>
+                  </div>
+                </div>
+
+                <div class="item__prop">
+                  <div class="item__color">
+                    <p class="item__subtitle item__color-title">Цвет</p>
+
+                    <div class="item__color-item color color_black color_check"></div>
+                  </div>
+
+                  <div class="item__size">
+                    <p class="item__subtitle item__size-title">Размер</p>
+
+                    <div class="item__size-item size">M</div>
+                  </div>
+                </div>
+
+                <button class="item__del" aria-label="Удалить товар из корзины"></button>
+
+                <div class="count item__count">
+                  <button class="count__item count__minus">-</button>
+                  <span class="count__item count__number">1</span>
+                  <button class="count__item count__plus">+</button>
+                  <input type="hidden" name="count" value="1">
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <div class="cart__total">
+            <p class="cart__total-title">Итого:</p>
+
+            <p class="cart__total-price">руб 9598</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="order">
+        <div class="container">
+          <h2 class="order__title">Оформление заказа</h2>
+
+          <form class="order__form">
+            <fieldset class="order__personal">
+              <label class="order__label">
+                <input class="order__input" type="text" placeholder="ФИО" name="fio">
+              </label>
+
+              <label class="order__label">
+                <input class="order__input" type="text" placeholder="Адрес доставки" name="address">
+              </label>
+
+              <label class="order__label">
+                <input class="order__input" type="text" placeholder="Телефон" name="phone">
+              </label>
+
+              <label class="order__label">
+                <input class="order__input" type="text" placeholder="E-mail" name="email">
+              </label>
+            </fieldset>
+
+            <fieldset class="order__radio-list">
+              <label class="order__radio radio">
+                <input class="radio__input" type="radio" name="delivery" value="delivery">
+                <span class="radio__text">Доставка</span>
+              </label>
+
+              <label class="order__radio radio">
+                <input class="radio__input" type="radio" name="delivery" value="self">
+                <span class="radio__text">Самовывоз</span>
+              </label>
+            </fieldset>
+
+            <button class="order__submit main-button" type="submit">Оформить</button>
+
+          </form>
+        </div>
+      </section>
+    </div>
+
     <section class="goods">
     </section>
 

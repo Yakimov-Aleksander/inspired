@@ -52,9 +52,14 @@ h1,
 h2,
 h3,
 p,
-figure,
-fieldset {
+figure {
   margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 iframe {
@@ -68,6 +73,10 @@ iframe {
 .visually-hidden {
   position: fixed;
   transform: scale(0);
+}
+
+.input-hide {
+  appearance: none;
 }
 
 /*

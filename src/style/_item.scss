@@ -1,0 +1,150 @@
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 24px 20px;
+  grid-template-areas:
+    'image content content del'
+    'image prop count count';
+
+  @include mobile {
+    gap: 10px;
+    grid-template-areas:
+      'image content content del'
+      'prop prop count count';
+  }
+
+  &__image {
+    grid-area: image;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__content {
+    grid-area: content;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    @include mobile {
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 11px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__vendor-code {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $gray;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &__prop {
+    grid-area: prop;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__color-title {
+    margin-bottom: 12px;
+
+    @include mobile {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__color-item {
+    width: 24px;
+    height: 24px;
+
+    &:after {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__size-title {
+    margin-bottom: 12px;
+
+    @include mobile {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__size-item {
+    width: 46px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__del {
+    grid-area: del;
+    width: 24px;
+    height: 24px;
+    background: url('../img/del.svg') center no-repeat;
+    justify-self: end;
+    align-self: start;
+  }
+
+  &__count {
+    grid-area: count;
+    justify-self: end;
+    align-self: end;
+  }
+}
