@@ -26,6 +26,8 @@
     "babel-loader": "^9.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "favicons": "^7.1.1",
+    "favicons-webpack-plugin": "^6.0.0",
     "gh-pages": "^5.0.0",
     "group-css-media-queries-loader": "^4.3.0",
     "html-loader": "^4.2.0",

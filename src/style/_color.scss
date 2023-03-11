@@ -19,4 +19,12 @@
     height: 12px;
     border-radius: 50%;
   }
+
+  &__input:checked + &__check {
+    position: absolute;
+    inset: 0;
+    display: block;
+    border: 0.4px solid $gray;
+    border-radius: 50%;
+  }
 }

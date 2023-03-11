@@ -1,0 +1,50 @@
+.pagination {
+  margin: 0 auto;
+  width: max-content;
+  display: flex;
+  gap: 16px;
+  padding-top: 40px;
+
+  &__list {
+    display: flex;
+    gap: 8px;
+    padding-top: 3px;
+    padding-bottom: 6px;
+  }
+
+  &__link {
+    position: relative;
+    width: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $gray;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      background-color: transparent;
+    }
+
+    &_active {
+      color: $main-color;
+
+      &::after {
+        background-color: $main-color;
+      }
+    }
+  }
+
+  &__arrow {
+    color: $main-color;
+
+    &_disabled {
+      color: $gray;
+      pointer-events: none;
+    }
+  }
+}

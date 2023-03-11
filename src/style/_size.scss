@@ -1,5 +1,24 @@
 .size {
-  display: block;
-  padding: 3px 14px;
-  border: 0.5px solid #000;
+  &__check {
+    display: block;
+    padding: 3px 14px;
+    border: 0.5px solid $main-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+  &__input {
+    position: absolute;
+  }
+
+  &__input:checked + &__check {
+    background-color: $main-color;
+    color: $second-color;
+  }
+
+  &__input:invalid:required + &__check {
+    background-color: $main-color;
+    color: $second-color;
+  }
 }
