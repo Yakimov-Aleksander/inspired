@@ -1,7 +1,9 @@
 import { DATA } from '../const';
 import { renderCard } from '../render/renderCard';
+import { renderCart } from '../render/renderCart';
 import { renderHero } from '../render/renderHero';
 import { renderNavigation } from '../render/renderNavigation';
+import { renderOrder } from '../render/renderOrder';
 import { renderProducts } from '../render/renderProducts';
 
 export const categoryPageController = (routerData) => {
@@ -19,8 +21,10 @@ export const categoryPageController = (routerData) => {
     (item) => item.slug === category,
   ).title;
 
-  renderNavigation(gender, category);
-  renderHero(false);
-  renderCard(false);
-  renderProducts(title, params);
+  renderNavigation({ gender, category, render: true });
+  renderHero({ render: false });
+  renderCard({ render: false });
+  renderProducts({ title, params, render: true });
+  renderCart({ render: false });
+  renderOrder({ render: false });
 };
