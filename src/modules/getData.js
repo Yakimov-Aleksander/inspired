@@ -11,6 +11,7 @@ export const getData = async (urlApi, param, cbError = () => {}) => {
     const response = await fetch(url);
 
     const data = await response.json();
+
     if (!response.ok) {
       throw new Error(data.message);
     }
@@ -18,13 +19,10 @@ export const getData = async (urlApi, param, cbError = () => {}) => {
     return data;
   } catch (err) {
     console.warn(err);
-
     if (typeof param === 'function') {
       param(err);
     } else {
       cbError(err);
     }
-
-    cbError(err);
   }
 };

@@ -1,0 +1,66 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  &__body {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    padding: 40px 24px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  &__description_thank {
+    margin-bottom: 0;
+  }
+
+  &__customer-data {
+    margin-bottom: 24px;
+  }
+
+  &__goods {
+    margin-bottom: 24px;
+  }
+
+  &__total {
+    margin-left: auto;
+    max-width: 145px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  &__close {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+
+     &:hover {
+      opacity: .5;
+     }
+  }
+}
